@@ -4,9 +4,10 @@ import SimpleSpice
 
 fun main (args: Array<String>) {
     buildAquarium()
+    makeFish()
 
-    val simpleSpice = SimpleSpice()
-    println("${simpleSpice.spiceName} ${simpleSpice.heat}")
+//    val simpleSpice = SimpleSpice()
+//    println("${simpleSpice.spiceName} ${simpleSpice.heat}")
 }
 
 private fun buildAquarium() {
@@ -30,10 +31,12 @@ private fun buildAquarium() {
     "width ${myAquarium2.width} and " +
     "height ${myAquarium2.height}.")
 
-
-
-
-
 }
 
+fun makeFish() {
+    val shark = Shark()
+    val pleco = Plecostomus()
+
+    println("Shark: ${shark.color} \nPlecostomus: ${pleco.color}")
+}
 
