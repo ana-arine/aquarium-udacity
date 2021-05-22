@@ -36,3 +36,6 @@ fun fishExample() {
     val fish = Fish(true, 20)
     println("Is the fish friendly? ${fish.friendly}. It needs volume ${fish.size}")
 }
+
+//To write good Kotlin code, just use one primary constructor and init blocks.
+//When you need more flexibility, consider adding helper functions like makeDefaultFish().
