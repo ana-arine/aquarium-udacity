@@ -1,41 +1,29 @@
 package spices
 
-abstract class Spice2 (val name: String, val spiciness: String = "mild") {
+abstract class Spice2 (val name: String, val spiciness: String = "mild", color: SpiceColor) : SpiceColor by color {
 
-    private val heat2: Int
-        get() {
-            return when (spiciness) {
-                "mild" -> 1
-                "medium" -> 3
-                "spicy" -> 5
-                "very spicy" -> 7
-                "extremely spicy" -> 10
-                else -> 0
-            }
-        }
-
-    val spices1 = listOf(
-        Spice("curry", "mild"),
-        Spice("pepper", "medium"),
-        Spice("cayenne", "spicy"),
-        Spice("ginger", "mild"),
-        Spice("red curry", "medium"),
-        Spice("green curry", "mild"),
-        Spice("hot pepper", "extremely spicy")
-    )
-    val spice = Spice("cayenne", spiciness = "spicy")
-
-    val spicelist = spices1.filter { it.heat2 < 5 }
-
-    fun makeSalt() = Spice("Salt")
+    abstract fun prepareSpice()
 }
 
-class Curry() {
-    override val spiciness: String
+class Curry(name: String, spiciness: String,
+            color: SpiceColor = YellowSpiceColor) : Spice2(name, spiciness, color), Grinder {
+    override fun grind() {
+    }
+
+    override fun prepareSpice() {
+        grind()
+    }
 }
 
+interface Grinder {
+    fun grind()
+}
 
-fun main(){
+interface SpiceColor {
+    val color: String
+}
 
-            }
+object YellowSpiceColor : SpiceColor {
+    override val color = "Yellow"
+}
 
