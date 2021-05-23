@@ -1,12 +1,10 @@
 package Aquarium
 
-import SimpleSpice
-
 fun main (args: Array<String>) {
     buildAquarium()
     makeFish()
 
-//    val simpleSpice = SimpleSpice()
+//    val simpleSpice = spices.SimpleSpice()
 //    println("${simpleSpice.spiceName} ${simpleSpice.heat}")
 }
 
@@ -33,13 +31,13 @@ private fun buildAquarium() {
 
 }
 
-fun feedFish(fish: FishAction) {
+fun feedFish(fish: FishAction2) {
     fish.eat()
 }
 
 fun makeFish() {
     val shark = Shark()
-    val pleco = Plecostomus()
+    val pleco = Plecostomus2()
 
     println("Shark: ${shark.color} \nPlecostomus: ${pleco.color}")
 

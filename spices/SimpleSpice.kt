@@ -1,3 +1,5 @@
+package spices
+
 class SimpleSpice() {
     val spiceName: String = "curry"
     val spiciness: String = "mild"

@@ -4,7 +4,7 @@ abstract class AquariumFish {
     abstract val color: String
 }
 
-class Shark: AquariumFish(), FishAction {
+class Shark: AquariumFish(), FishAction2 {
     override val color = "grey"
     override fun eat() {
         println("Hunt and eat fish")
@@ -12,7 +12,7 @@ class Shark: AquariumFish(), FishAction {
 }
 
 
-class Plecostomus: AquariumFish(), FishAction {
+class Plecostomus: AquariumFish(), FishAction2 {
     override val color = "gold"
 
     override fun eat() {

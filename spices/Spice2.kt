@@ -1,6 +1,8 @@
-class Spice (val name: String, val spiciness: String = "mild") {
+package spices
 
-    private val heat: Int
+abstract class Spice2 (val name: String, val spiciness: String = "mild") {
+
+    private val heat2: Int
         get() {
             return when (spiciness) {
                 "mild" -> 1
@@ -11,7 +13,6 @@ class Spice (val name: String, val spiciness: String = "mild") {
                 else -> 0
             }
         }
-
 
     val spices1 = listOf(
         Spice("curry", "mild"),
@@ -24,8 +25,17 @@ class Spice (val name: String, val spiciness: String = "mild") {
     )
     val spice = Spice("cayenne", spiciness = "spicy")
 
-    val spicelist = spices1.filter { it.heat < 5 }
+    val spicelist = spices1.filter { it.heat2 < 5 }
 
     fun makeSalt() = Spice("Salt")
-
 }
+
+class Curry() {
+    override val spiciness: String
+}
+
+
+fun main(){
+
+            }
+
