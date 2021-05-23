@@ -24,7 +24,13 @@ fun makeDecorations(){
     val d5 = Decorations2("crystal", "maple wood", "holy diver")
     println(d5)
 
+    val (rocks, wood, diver) = d5
+    println(rocks)
+    println(wood)
+    println(diver)
+
 }
+
 data class Decorations(val rocks: String) {}
 
 data class Decorations2(val rocks: String, val wood: String, val diver: String) {}
