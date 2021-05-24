@@ -1,5 +1,8 @@
 package spices
 
+import Aquarium.Color
+
+
 abstract class Spice2 (val name: String, val spiciness: String = "mild", color: SpiceColor) : SpiceColor by color {
 
     abstract fun prepareSpice()
@@ -20,10 +23,10 @@ interface Grinder {
 }
 
 interface SpiceColor {
-    val color: String
+    val color: Color
 }
 
 object YellowSpiceColor : SpiceColor {
-    override val color = "Yellow"
+    override val color = Color.GREEN  //couldn't be yellow
 }
 
